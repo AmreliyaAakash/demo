@@ -50,7 +50,9 @@ export default function Cup() {
                 group.current.scale.setScalar(THREE.MathUtils.lerp(0.01, 0.012, ft))
                 group.current.rotation.y += Math.sin(ft * Math.PI) * 0.5
                 
-                // Reset opacity for preceding sections
+                // Reset opacity for preceding sections and ENSURE SHARPNESS
+                materials.material.transparent = false
+                materials.material_1.transparent = false
                 materials.material.opacity = 1
                 materials.material_1.opacity = 1
                 group.current.visible = true
