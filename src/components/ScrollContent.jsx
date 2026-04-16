@@ -32,6 +32,9 @@ export default function ScrollContent() {
                         toggleActions: "play none none reverse",
                     }
                 }
+            );
+        });
+
         // Background Blur Animation for final section
         gsap.to(".blur-overlay", {
             backdropFilter: "blur(12px)",
